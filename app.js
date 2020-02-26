@@ -23,9 +23,13 @@ function showRecentMovies() {
     recMov.forEach((el, i = 2) => {
         document.getElementById('recentMovies').innerHTML += `
         <div id="oneMovie" class="item${i}">
-            <div id="name">${el.naziv}</div>
-            <img id="slika" src="${el.slika}" alt="${el.naziv}img">
-            <div id="god">${el.godina}</div>
+            <div id="iSlika">
+                <img id="slika" src="${el.slika}" alt="${el.naziv}img">
+            </div> 
+            <div id="ime-god">
+                <div id="name">${el.naziv}</div>
+                <div id="god">${el.godina}</div>
+            </div>   
         </div>
         `;
         // i++;
