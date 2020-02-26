@@ -22,8 +22,9 @@ body {
     'main1 main2 main3 main4 main5'
     'footer footer footer footer footer';
   grid-gap: 10px;
-  /* background-color: #2196F3; */
   padding: 10px;
+  grid-auto-columns: 1fr;
+  color: black; 
 }
 
 .grid-container > div {
