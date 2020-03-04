@@ -10,15 +10,14 @@
 <body>
     <form action="https://baza-filmova.herokuapp.com/dodaj-film/" method="POST">
         <div>
-            <input placeholder="Naziv" type="text" id="naziv" name="naziv"><br>
-            <input placeholder="Godina" type="datetime" id="godina" name="godina"><br>
+            <input placeholder="Naziv" type="text" id="naziv" name="naziv" required><br>
+            <input placeholder="Godina" type="datetime" id="godina" name="godina" required>
         </div>
         <div>
-            <input placeholder="Slika" type="url" id="url" name="slika"><br>
+            <input placeholder="Slika" type="url" id="url" name="slika" required><br>
             <input placeholder="Dodati" type="submit" id="submit" value="Dodati">
         </div></form>
         <img src="" id="prazno">
-    <div id="dodat"></div>
     <script src="dodajfilm.js"></script>
 </body>
 
