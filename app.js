@@ -24,7 +24,7 @@ function showRecentMovies() {
 
     recMov.forEach((el, i = 2) => {
         x = el.dodat;
-        y = moment(x, "YYYYMMDD").fromNow();//racuna pre koliko vremena je dodat film, metoda iz biblioteke moment.js ('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js')
+        y = moment(x, "YYYYMMDD").fromNow(); //racuna pre koliko vremena je dodat film, metoda iz biblioteke moment.js ('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js')
         document.getElementById('recentMovies').innerHTML += `
         <div id="oneMovie" class="item${i}">
             <div id="iSlika">
