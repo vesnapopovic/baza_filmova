@@ -1,5 +1,6 @@
 let allMovies = [];
 
+
 fetch(`https://baza-filmova.herokuapp.com/filmovi/`)
     .then((response) => {
         return response.json();
