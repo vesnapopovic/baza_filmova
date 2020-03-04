@@ -6,15 +6,19 @@ fetch('https://baza-filmova.herokuapp.com/filmovi/')
     .then(data => {
         filmovi = data;
         console.log(filmovi);
+        prikaziFilmove();
     })
 
 // prikaz filmova na celoj stranici u vise kolona
 
 
 prikazFilmova = document.getElementById('iPrikazFilmova');
-for (let i = 0; i < filmovi.length; i++) {
-    prikazFilmova.innerHTML += (`${filmovi[i].naziv}<br><br><img src="${filmovi[i].slika}" alt=""><br><br>${filmovi[i].godina}<br><br><br>`);
 
+function prikaziFilmove() {
+    for (let i = 0; i < filmovi.length; i++) {
+        prikazFilmova.innerHTML += (`<div class="OneMovie"><div class="naziv">${filmovi[i].naziv}</div><div class="slika"><img src="${filmovi[i].slika}" alt=""></div><div class="godina">${filmovi[i].godina}</div></div>`);
+
+    }
 }
 
 
@@ -54,19 +58,13 @@ pretraga.addEventListener('input', pronadji);
 function sortirajUzlazno() {
     filmovi.sort(function (a, b) { return a.godina - b.godina });
     prikazFilmova.innerHTML = "";
-    for (let i = 0; i < filmovi.length; i++) {
-        prikazFilmova.innerHTML += (`${filmovi[i].naziv}<br><br><img src="${filmovi[i].slika}" alt=""><br><br>${filmovi[i].godina}<br><br><br>`);
-
-    }
+    prikaziFilmove();
 }
 
 function sortirajSilazno() {
     filmovi.sort(function (a, b) { return b.godina - a.godina });
     prikazFilmova.innerHTML = "";
-    for (let i = 0; i < filmovi.length; i++) {
-        prikazFilmova.innerHTML += (`${filmovi[i].naziv}<br><br><img src="${filmovi[i].slika}" alt=""><br><br>${filmovi[i].godina}<br><br><br>`);
-
-    }
+    prikaziFilmove();
 }
 
 najstariji = document.getElementById('iNajstariji');
@@ -94,10 +92,7 @@ function sortirajZA() {
         return 0;
     });
     prikazFilmova.innerHTML = "";
-    for (let i = 0; i < filmovi.length; i++) {
-        prikazFilmova.innerHTML += (`${filmovi[i].naziv}<br><br><img src="${filmovi[i].slika}" alt=""><br><br>${filmovi[i].godina}<br><br><br>`);
-
-    }
+    prikaziFilmove();
 }
 
 
@@ -116,18 +111,13 @@ function sortirajAZ() {
         return 0;
     });
     prikazFilmova.innerHTML = "";
-    for (let i = 0; i < filmovi.length; i++) {
-        prikazFilmova.innerHTML += (`${filmovi[i].naziv}<br><br><img src="${filmovi[i].slika}" alt=""><br><br>${filmovi[i].godina}<br><br><br>`);
-
-    }
+    prikaziFilmove();
 }
 
 az = document.getElementById('iAZ');
 za = document.getElementById('iZA');
 az.addEventListener('click', sortirajAZ);
 za.addEventListener('click', sortirajZA);
-
-
 
 
 
