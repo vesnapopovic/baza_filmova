@@ -6,8 +6,29 @@ body {
     color: white;
 }
 
-
-
+.grid-container {
+     grid-template-areas: 
+    'header '
+    'main'
+    'footer';
+    
+}
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+    
+    
+}
+#iPrikazFilmova {
+    display: grid;
+    gap:10px
+    
+}
+.footer {
+    grid-area: footer;
+}
 
 
 
@@ -44,3 +65,4 @@ body {
 #pretraga {
     margin-right: 8px;
 }
+
