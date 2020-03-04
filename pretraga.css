@@ -23,6 +23,7 @@ body {
 }
 #iPrikazFilmova {
     display: grid;
+    grid-template-columns: repeat(auto-fill,200px);;
     gap:10px
     
 }
@@ -66,3 +67,6 @@ body {
     margin-right: 8px;
 }
 
+img {
+    max-width: 100%;
+}
