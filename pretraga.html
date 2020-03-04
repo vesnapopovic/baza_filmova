@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,51 @@
     <link rel="stylesheet" href="pretraga.css">
     <title>Pretraga</title>
 </head>
+
 <body>
-        <nav class="header">
-                <div id="nav-left">
-                    <img src="movie.png" alt="movie" id="logo">
-                    <div>Baza Filmova</div>
-                </div>
-                <div id="nav-right">
-                    <!-- <a href="index.html">Naslovna</a> -->
-                    <a href="pretraga.html" id="pretraga">Pretraga filmova</a>
-                    <a href="dodajfilm.html" id="dodavanje">Dodaj film</a>
-                </div>
-            </nav>
-
-<div id="grid-container">
-<select name="nGodina" id="iGodina">
-    <option value="selektuj">===sortiraj filmove po godini===</option>
-    <option value="Uzlazno">Uzlazno</option>
-    <option value="Silazno">Silazno</option>
-</select>      
-<select name="nNaziv" id="iNaziv">
-    <option value="sortiraj">===sortiraj filmove po nazivu===</option>
-    <option value="az">A-Z</option>
-    <option value="za">Z-A</option>
-</select>
-<br>
-<br>
-<br>
-<input type="text" placeholder="Pronadji film" id="iPronadjiFilm" >
-<div id="iLoader"></div>
-<div id="iPrikazFilmova"></div>
 
 
+    <div class="header">
+ <nav class="header">
+        <div id="nav-left">
+            <img src="movie.png" alt="movie" id="logo">
+            <div>Baza Filmova</div>
+        </div>
+        <div id="nav-right">
+            <!-- <a href="index.html">Naslovna</a> -->
+            <a href="pretraga.html" id="pretraga">Pretraga filmova</a>
+            <a href="dodajfilm.html" id="dodavanje">Dodaj film</a>
+        </div>
+    </nav>
+
+    </div>
+   
+
+    <div class="main">
+
+        <button id="iNajstariji">Pocev od najstarijeg</button>
+        <button id="iNajmladji"> Pocev od najmladjeg</button>
+        <button id="iAZ">A-Z</button>
+        <button id="iZA">Z-A</button>
+        <br>
+        <br>
+        <br>
+        <input type="text" placeholder="Pronadji film" id="iPronadjiFilm"><br><br>
+        <div id="iLoader"></div>
+        <div id="iPrikazFilmova">
 
 
-</div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="footer"></div>
 
 
 
@@ -55,4 +66,5 @@
 
     <script src="pretraga.js"></script>
 </body>
+
 </html>

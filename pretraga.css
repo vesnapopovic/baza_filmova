@@ -6,8 +6,30 @@ body {
     color: white;
 }
 
-
-
+.grid-container {
+     grid-template-areas: 
+    'header '
+    'main'
+    'footer';
+    
+}
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+    
+    
+}
+#iPrikazFilmova {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,200px);;
+    gap:10px
+    
+}
+.footer {
+    grid-area: footer;
+}
 
 
 
@@ -26,7 +48,7 @@ body {
     width: 10%;
 }
 
-#pretraga, #dodavanje {
+#pretraga , #dodavanje {
     background-color: rgba(201, 37, 37, 0.8);
     border: solid 1px rgba(255,255,255,.15);
     color: #fff;
@@ -43,4 +65,8 @@ body {
 
 #pretraga {
     margin-right: 8px;
+}
+
+img {
+    max-width: 100%;
 }
