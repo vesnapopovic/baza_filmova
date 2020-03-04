@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dodajfilm.css">
+</head>
+<body>
+    <form action="https://baza-filmova.herokuapp.com/dodaj-film/" method="POST">
+        <div>
+            <input placeholder="Naziv" type="text" id="naziv" name="naziv"><br>
+            <input placeholder="Godina" type="datetime" id="godina" name="godina"><br>
+        </div>
+        <div>
+            <input placeholder="Slika" type="url" id="url" name="slika"><br>
+            <input placeholder="Dodati" type="submit" id="submit" value="Dodati">
+        </div></form>
+        <img src="" id="prazno">
+    <div id="dodat"></div>
+    <script src="dodajfilm.js"></script>
+</body>
+
+</html>
