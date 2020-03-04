@@ -18,7 +18,7 @@ function showRecentMovies() {
     const numOfRecMov = 5;
     const recMov = allMovies.slice(-numOfRecMov);
 
-    console.log(recMov);
+   
 
     moment.locale('sr'); // ukljucivanje srpskog jezika za biblioteku moment.js
 
